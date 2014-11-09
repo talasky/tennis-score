@@ -1,0 +1,9 @@
+tennisScore.py
+
+Revision history:
+
+Development initiated August 10, 2014
+
+Version 1.0: November 8, 2014
+	* Initial functionality
+	* Future developement issues noted in README.txt

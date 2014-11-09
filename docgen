@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -d "html" ]; then
+  rm -rf html
+fi
+
+#epydoc --html -o html --name sbetKmlGen --graph classtree sbetKmlGen sbetReader myTkSimpleDialog
+
+epydoc --config doc.cfg
+
