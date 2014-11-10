@@ -1,11 +1,14 @@
 #!/usr/bin/python
 """
 util.py
-*****************************************************
-* Copyright 2014, Ty A. Lasky                       *
-* Released under the GNU General Public License 3.0 *
-* See LICENSE.txt for license information.          *
-*****************************************************
+
+Copyright 2014, Ty A. Lasky
+
+Released under the GNU General Public License 3.0
+
+See LICENSE.txt for license information.
+
+---------------------------------------------------
 
 Utility routines for tennisScore.py.
 

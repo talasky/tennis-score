@@ -1,11 +1,14 @@
 
 tennisScore application
-version 1.0
-November 8, 2014
+
 Copyright 2014, Ty A. Lasky
 
 Released under the GNU General Public License 3.0
 (See file LICENSE.txt)
+
+version 1.00.01, November 9, 2014
+
+version 1.0, November 8, 2014
 
 Project contact: Ty A. Lasky	<talasky@gmail.com>
 
@@ -37,7 +40,16 @@ To generate source code documentation, use (shell script):
 
 ./docgen
 
-Must have epydoc installed
+Must have epydoc and graphviz installed. On Linux, use either:
+
+(a)
+sudo apt-get install python-epydoc graphviz
+
+or
+
+(b) (if have installed pip)
+sudo apt-get install graphviz
+pip install epydoc
 
 ===========================================================================================================
 

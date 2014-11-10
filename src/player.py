@@ -1,12 +1,14 @@
 #!/usr/bin/python
-
 """
 player.py
-*****************************************************
-* Copyright 2014, Ty A. Lasky                       *
-* Released under the GNU General Public License 3.0 *
-* See LICENSE.txt for license information.          *
-*****************************************************
+
+Copyright 2014, Ty A. Lasky
+
+Released under the GNU General Public License 3.0
+
+See LICENSE.txt for license information.
+
+---------------------------------------------------
 
 The player and team classes for tennis scoreboard based on MVC architecture.
 
@@ -15,7 +17,6 @@ Exported classes:
 Player -- Represents an indivudiual tennis player.
 
 Team -- Represents a group of players (1 or 2).
-
 """
 
 class Player():
@@ -73,7 +74,7 @@ class Player():
 		Tests equality of Player object vs. other Player object.
 		@type other: Player
 		@param other: The other Player object.
-		@rtype boolean
+		@rtype: boolean
 		@return: True if current Player = other Player.
 		"""
 		return self.__dict__ == other.__dict__
@@ -83,7 +84,7 @@ class Player():
 		Tests inequality of Player object vs. other Player object.
 		@type other: Player
 		@param other: The other Player object.
-		@rtype boolean
+		@rtype: boolean
 		@return: True if current Player is not equal to other Player.
 		"""
 		return not self.__eq__(other)
@@ -99,7 +100,7 @@ class Player():
 		Tests whether Player rank is less than other Player object rank.
 		@type other: Player, or integer
 		@param other: The other Player object, or a rank number.
-		@rtype boolean
+		@rtype: boolean
 		@return: True if current Player rank is less than other Player rank, or provided rank. (rank = 1) is less than (rank = 2).
 		"""
 		if hasattr(other,'rank'):
@@ -112,7 +113,7 @@ class Player():
 		Tests whether Player rank is greater than other Player object rank.
 		@type other: Player, or integer
 		@param other: The other Player object, or a rank number.
-		@rtype boolean
+		@rtype: boolean
 		@return: True if current Player rank is greater than other Player rank, or provided rank. (rank = 2) is greater than (rank = 2).
 		"""
 		if hasattr(other,'rank'):
@@ -125,7 +126,7 @@ class Player():
 		Tests whether Player rank is less than or equal to other Player object rank.
 		@type other: Player, or integer
 		@param other: The other Player object, or a rank number.
-		@rtype boolean
+		@rtype: boolean
 		@return: True if current Player rank is less than or equal to other Player rank, or provided rank. (rank = 1) is less than or equal to (rank = 2)
 		"""
 		return self.__eq__(other) or self.__lt__(other)
@@ -135,7 +136,7 @@ class Player():
 		Tests whether Player rank is greater than or equal to other Player object rank.
 		@type other: Player, or integer
 		@param other: The other Player object, or a rank number.
-		@rtype boolean
+		@rtype: boolean
 		@return: True if current Player rank is greater than or equal to other Player rank, or provided rank.  (rank = 2) is greater than or equal to (rank = 2).
 		"""
 		return self.__eq__(other) or self.__gt__(other)

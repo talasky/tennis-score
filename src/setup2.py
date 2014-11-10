@@ -2,26 +2,31 @@
 
 """
 setup2.py
-*****************************************************
-* Copyright 2014, Ty A. Lasky                       *
-* Released under the GNU General Public License 3.0 *
-* See LICENSE.txt for license information.          *
-*****************************************************
+
+Copyright 2014, Ty A. Lasky
+
+Released under the GNU General Public License 3.0
+
+See LICENSE.txt for license information.
+
+---------------------------------------------------
 
 Second setup dialog. Gets further setup information for match.
-Based on MVC architecture.
 
 Exported classes:
 
 Setup2 -- Second setup dialog. Gets further setup information for match.
 """
-import util
 py = 2
 try:
 	import Tkinter as tk
 except:
 	import tkinter as tk
 	py = 3
+
+import sys
+sys.path.append('../lib')
+import util
 
 mtypeList = ["Round 1", "Round 2", "Round 3", "Round 4",
 			"Round of 16", "Quarterfinal", "Semifinal", "Championship"]

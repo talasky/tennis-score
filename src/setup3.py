@@ -2,20 +2,21 @@
 
 """
 setup3.py
-*****************************************************
-* Copyright 2014, Ty A. Lasky                       *
-* Released under the GNU General Public License 3.0 *
-* See LICENSE.txt for license information.          *
-*****************************************************
+
+Copyright 2014, Ty A. Lasky
+
+Released under the GNU General Public License 3.0
+
+See LICENSE.txt for license information.
+
+---------------------------------------------------
 
 Third setup dialog. Gets all remaining setup information, including players.
-Based on MVC architecture.
 
 Exported classes:
 
 Setup3 -- Third setup dialog, get player names.
 """
-import util
 py  = 2
 try:
 	import Tkinter as tk
@@ -23,7 +24,10 @@ except:
 	import tkinter as tk
 	py = 3
 import player
+
 import sys
+sys.path.append('../lib')
+import util
 
 baseUrl = 'http://tylasky.com/res/tennisScore/'
 mensSinglesUrl = baseUrl + 'menSingles.txt'
@@ -38,7 +42,7 @@ class Setup3(tk.Toplevel):
 	def __init__(self, master, mens, doubles):
 		"""
 		@type master: Toplevel widget
-		@param: master: Main application window.
+		@param master: Main application window.
 		@type mens: integer
 		@param mens: Flag, 0 - women's match, 1 = men's match, 2 = mixed match.
 		@type doubles: boolean

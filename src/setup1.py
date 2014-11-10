@@ -2,26 +2,31 @@
 
 """
 setup1.py
-*****************************************************
-* Copyright 2014, Ty A. Lasky                       *
-* Released under the GNU General Public License 3.0 *
-* See LICENSE.txt for license information.          *
-*****************************************************
+
+Copyright 2014, Ty A. Lasky
+
+Released under the GNU General Public License 3.0
+
+See LICENSE.txt for license information.
+
+---------------------------------------------------
 
 First setup dialog. Just whether singles or doubles.
-Based on MVC architecture.
 
 Exported classes:
 
 Setup1 -- First setup dialog. Just whether singles or doubles.
 """
-import util
 py = 2
 try:
 	import Tkinter as tk
 except:
 	import tkinter as tk
 	py = 3
+
+import sys
+sys.path.append('../lib')
+import util
 
 width1 = 18
 
@@ -30,7 +35,7 @@ class Setup1(tk.Toplevel):
 	def __init__(self, master):
 		"""
 		@type master: Toplevel widget
-		@param: master: Main application window.
+		@param master: Main application window.
 		"""
 		tk.Toplevel.__init__(self, master)
 		self.overrideredirect(1) # No window decorations, no way to close window

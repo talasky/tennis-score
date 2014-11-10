@@ -2,11 +2,14 @@
 
 """
 tennisView.py
-*****************************************************
-* Copyright 2014, Ty A. Lasky                       *
-* Released under the GNU General Public License 3.0 *
-* See LICENSE.txt for license information.          *
-*****************************************************
+
+Copyright 2014, Ty A. Lasky
+
+Released under the GNU General Public License 3.0
+
+See LICENSE.txt for license information.
+
+---------------------------------------------------
 
 Provides the scoreboard view for tennis scoreboard based on MVC architecture.
 
@@ -42,6 +45,7 @@ if py == 2:
 	from StringIO import StringIO
 
 import sys
+sys.path.append('../lib')
 import util
 
 DEBUG = False

@@ -1,12 +1,14 @@
 #!/usr/bin/python
-
 """
 scoring.py
-*****************************************************
-* Copyright 2014, Ty A. Lasky                       *
-* Released under the GNU General Public License 3.0 *
-* See LICENSE.txt for license information.          *
-*****************************************************
+
+Copyright 2014, Ty A. Lasky
+
+Released under the GNU General Public License 3.0
+
+See LICENSE.txt for license information.
+
+---------------------------------------------------
 
 The scoring controls for tennis scoreboard based on MVC architecture.
 
@@ -14,13 +16,16 @@ Exported classes:
 
 Scoring -- A simple window providing scoring buttons for two tennis teams (players)
 """
-import util
 py = 2
 try:
 	import Tkinter as tk
 except:
 	import tkinter as tk
 	py = 3
+
+import sys
+sys.path.append('../lib')
+import util
 
 score1Color = 'blue'
 score2Color = 'red'

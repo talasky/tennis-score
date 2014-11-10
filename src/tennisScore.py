@@ -2,17 +2,20 @@
 
 """
 tennisScore.py
-*****************************************************
-* Copyright 2014, Ty A. Lasky                       *
-* Released under the GNU General Public License 3.0 *
-* See LICENSE.txt for license information.          *
-*****************************************************
+
+Copyright 2014, Ty A. Lasky
+
+Released under the GNU General Public License 3.0
+
+See LICENSE.txt for license information.
+
+---------------------------------------------------
 
 Main program (controller) for tennis scoreboard based on model, view, controller architecture.
 
 Exported classes:
 
-Controller -- The conntroller for a tennis scoreboard program.
+Controller -- The controller for a tennis scoreboard program.
 """
 
 py = 2
@@ -30,6 +33,9 @@ from playerError import PlayerError
 from scoring import Scoring
 from random import randrange
 import player
+
+import sys
+sys.path.append('../lib')
 import util
 
 DEBUG = False
@@ -38,7 +44,7 @@ DEBUG = False
 specialCaseNames = [('Pliskova','K')] # Karolina and Kristyna
 
 class Controller:
-	"""The conntroller for a tennis scoreboard program."""
+	"""The controller for a tennis scoreboard program."""
 	def __init__(self, root):
 		"""
 		@type root: Toplevel widget
@@ -95,7 +101,7 @@ class Controller:
 		"""
 		Updates the message to be displayed on the scoreboard.
 		@type message: string
-		@param currentSet: The message to be displayed on the scoreboard.
+		@param message: The message to be displayed on the scoreboard.
 		"""
 		self.scoreboard.setMessage(message)
 
@@ -135,6 +141,7 @@ class Controller:
 			# Show the winner photo(s) if available
 			self.scoreboard.showWinnerPhotos(winner)
 			self.scoreboard.setSetColorsSame()
+			self.scoringView.destroy()
 
 	def tiebreakChanged(self,tiebreak):
 		"""

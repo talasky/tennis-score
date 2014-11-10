@@ -1,12 +1,14 @@
 #!/usr/bin/python
-
 """
 playerError.py
-*****************************************************
-* Copyright 2014, Ty A. Lasky                       *
-* Released under the GNU General Public License 3.0 *
-* See LICENSE.txt for license information.          *
-*****************************************************
+
+Copyright 2014, Ty A. Lasky
+
+Released under the GNU General Public License 3.0
+
+See LICENSE.txt for license information.
+
+---------------------------------------------------
 
 Player error dialog.
 
@@ -33,7 +35,7 @@ class PlayerError(tk.Toplevel):
 	def __init__(self, master):
 		"""
 		@type master: Toplevel widget
-		@param: master: Main application window.
+		@param master: Main application window.
 		"""
 		tk.Toplevel.__init__(self, master)
 		tk.Label(self,text = "All players must be distinct.\nTry again.", font=myFont).pack()

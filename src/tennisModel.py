@@ -1,12 +1,14 @@
 #!/usr/bin/python
-
 """
 tennisModel.py
-*****************************************************
-* Copyright 2014, Ty A. Lasky                       *
-* Released under the GNU General Public License 3.0 *
-* See LICENSE.txt for license information.          *
-*****************************************************
+
+Copyright 2014, Ty A. Lasky
+
+Released under the GNU General Public License 3.0
+
+See LICENSE.txt for license information.
+
+---------------------------------------------------
 
 The model for tennis scoreboard based on MVC architecture.
 
@@ -15,9 +17,12 @@ Exported classes:
 Model -- Provides fields and logic for a tennnis match.
 """
 
-from observable import Observable
 import player
+
+import sys
+sys.path.append('../lib')
 import util
+from observable import Observable
 
 DEBUG = False
 
@@ -92,7 +97,7 @@ class Model:
 	def gameDelta(self):
 		"""
 		Returns the absolute value of the difference in the current game score.
-		@rtype integer
+		@rtype: integer
 		@return: The absolute value of the difference in the current game score.
 		"""
 		return scoreDelta(self.gameScore.get())
@@ -102,7 +107,7 @@ class Model:
 		Returns whether the current score corresponds to game point.
 		@type score: list of integers
 		@param score: The current game score.
-		@rtype boolean
+		@rtype: boolean
 		@return: Whether the current score corresponds to game point.
 		"""
 		gameLeader = leader(score)
@@ -122,7 +127,7 @@ class Model:
 		Returns whether the current score corresponds to break point.
 		@type score: list of integers
 		@param score: The current game score.
-		@rtype boolean
+		@rtype: boolean
 		@return: Whether the current score corresponds to break point.
 		"""
 		if not self.gamePoint(score):
@@ -145,7 +150,7 @@ class Model:
 		Returns whether the current score corresponds to set point.
 		@type score: list of integers
 		@param score: The current game score.
-		@rtype boolean
+		@rtype: boolean
 		@return: Whether the current score corresponds to set point.
 		"""
 		if not self.gamePoint(score):
@@ -170,7 +175,7 @@ class Model:
 		Returns whether the current score corresponds to match point.
 		@type score: list of integers
 		@param score: The current game score.
-		@rtype boolean
+		@rtype: boolean
 		@return: Whether the current score corresponds to match point.
 		"""
 		if not self.setPoint(score):
@@ -195,7 +200,7 @@ class Model:
 		"""
 		Determines what message should be displayed on scoreboard based on match conditions.
 		@type score: list of integers
-		@param: The current game score.
+		@param score: The current game score.
 		"""
 		# Note: Prefix is way overdone vs. what you see on TV matches. But, it's accurate, and I like it.
 		prefix = ("","","Double ","Triple ","Quadruple ","Quintuple ","Sextuple ")
@@ -413,7 +418,7 @@ def scoreDelta(score):
 	Returns the absolute value of the difference in the score.
 	@type score: list of integers
 	@param score: The score as a list of two integers.
-	@rtype integer
+	@rtype: integer
 	@return: The absolute value of the difference in the score.
 	"""
 	return abs(score[0]-score[1])

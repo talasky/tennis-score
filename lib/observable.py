@@ -2,11 +2,6 @@
 
 """
 observable.py
-*****************************************************
-* Copyright 2014, Ty A. Lasky                       *
-* Released under the GNU General Public License 3.0 *
-* See LICENSE.txt for license information.          *
-*****************************************************
 
 The observable class for tennis scoreboard based on MVC architecture.
 
@@ -15,8 +10,9 @@ Exported classes:
 Observable -- Provides an observable object, useful for MVC. 
 
 Credit:
-    observable.py copied directly from I{http://tkinter.unpythonic.net/wiki/ToyMVC}
-    with (I believe) no modification. GPL licensed.
+
+observable.py copied directly from I{http://tkinter.unpythonic.net/wiki/ToyMVC}
+with (I believe) no modification. GPL licensed.
 """
 
 class Observable:
