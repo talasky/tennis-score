@@ -36,6 +36,21 @@ python 2.7.6 in Linux Mint 17, Cinammon, 64-bit
 python 3.4.0 in Linux Mint 17, Cinammon, 64-bit
 python 2.7.6 in Windows 7, 64-bit
 ===========================================================================================================
+How to Run:
+
+1) First, get the files. You need the files in src, lib, and util
+
+2) Second, if you don't already have it, you need to install Python. You can get it from http://www.python.org
+
+At this point, you're ready to go.
+
+3) Change into directory src
+
+4) Type: "python tennisScore.py"
+
+Hopefully, the rest is self-explanatory!
+
+===========================================================================================================
 To generate source code documentation, use (shell script):
 
 ./docgen
@@ -94,6 +109,10 @@ using unicode \u02cd. It's a little narrower than I like.
 	http://en.wikipedia.org/wiki/List_of_IOC_country_codes
 	and generate res/iocCountries.txt
 	Alternately, have util/countryUtil.py read directly from that URL, and generate res/countries.txt
+
+* Add a notification mechanism so that developer is alerted
+when a player wins a game, but there is no corresponding photo.
+This mechanism could be helpful for other notifications.
 
 * In tennisView.View.readCountries maybe do something more
 graceful if cannot read country file. Could set a flag, and
