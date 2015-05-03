@@ -16,7 +16,7 @@ Tennis scoreboard based on model, view, controller architecture.
 The main program is tennisScore.py, the controller.
 
 Credit:
-	For flag images, using the small freeware image flags from:	http://www.33ff.com/flags/
+	For flag images, using the small freeware flag images from http://www.33ff.com/flags/
 
 Credit:
 	Women player's images from rankings pages at http://wtatennis.com
